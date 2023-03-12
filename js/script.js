@@ -8,6 +8,8 @@ generateBtn.addEventListener("click", (event) => {
   const index = randomNumber(6);
   const stars = document.querySelector(".stars");
 
+ 
+
   jokeContainer.innerHTML = jokesArray[index].quote;
 
   jokeAuthor.innerHTML = jokesArray[index].owner;

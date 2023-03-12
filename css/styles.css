@@ -22,22 +22,62 @@ body {
     rgba(63, 94, 251, 1) 0%,
     rgb(44, 27, 90) 100%
   );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 
 .top-header {
   padding: 2rem;
   min-height: 10rem;
+
+  overflow: hidden;
+
+}
+
+.home {
+  text-decoration: none;
+  animation: show-title 2s ease;
+
+}
+
+@keyframes show-title {
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  
 }
 
 .pagetitle {
   font-family: "Unbounded", cursive;
   font-size: 3rem;
+  text-decoration: none;
   color: var(--color2);
 }
 
 .container {
   width: min(100% - 2rem, 40em);
   margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-m {
+  gap: 2rem;
 }
 
 .center {
@@ -51,11 +91,17 @@ body {
   background: white;
   padding: 1rem;
 
-  display: flex;
+  
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
   filter: drop-shadow(0px 0px 10px rgba(67, 30, 67, 0.5));
+}
+
+
+
+.display-none {
+  display: none;
 }
 
 .author {
@@ -69,12 +115,22 @@ body {
 /* Button */
 
 .btn-1 {
-  color: white;
-  background: var(--color3);
+  font-size: 1.1rem;
+  font-kerning: none;
+  letter-spacing: 1px;
+  color: black;
+  background: var(--color2);
+  transition: 300ms ease;
 }
 
 .btn-1:hover {
+  letter-spacing: 3px;
   background: #2f8fff;
+}
+
+.btn-1:active {
+  transform: rotate(180deg);
+  background: rgb(37, 196, 37);
 }
 
 .btn-prop {
